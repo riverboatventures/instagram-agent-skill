@@ -9,6 +9,10 @@ description: >-
 
 # ig-reply
 
+**Voice first.** Read `~/.claude/instagram/voice.md` if it exists and write
+in that voice. If it does not, ask for two or three things the user wrote
+themselves and work from those. `/ig-reel` explains how to write the file.
+
 The comment thread under your own post is where reach is decided. Every reply
 is another interaction on the post, replies arriving in the first hour do most
 of the work, and on Instagram a reply can also be a Reel, which is the single

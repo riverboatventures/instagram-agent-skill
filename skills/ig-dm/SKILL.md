@@ -10,6 +10,10 @@ description: >-
 
 # ig-dm
 
+**Voice first.** Read `~/.claude/instagram/voice.md` if it exists and write
+in that voice. If it does not, ask for two or three things the user wrote
+themselves and work from those. `/ig-reel` explains how to write the file.
+
 Instagram DMs are the only place on the platform where money actually changes
 hands, and they are also where most accounts burn the goodwill their content
 earned. The difference is entirely about who moved first.

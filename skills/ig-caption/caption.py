@@ -40,10 +40,13 @@ MENTION_RE = re.compile(r"(?:^|\s)(@[A-Za-z0-9_.]+)")
 LINK_RE = re.compile(r"https?://\S+|\bwww\.\S+|\b[a-z0-9-]+\.(?:com|co|io|net|org|ai|app)/\S*",
                      re.IGNORECASE)
 EMOJI_RE = re.compile(r"[\U0001F300-\U0001FAFF☀-➿←-⇿️]")
-CONCRETE_RE = re.compile(r"\$\s?\d|\b\d[\d,.]*\b|(?<!^)\b[A-Z][a-z]{2,}\b", re.MULTILINE)
+# A capital after a full stop starts a sentence, it is not a name.
+CONCRETE_RE = re.compile(r"\$\s?\d|\b\d[\d,.]*\b|(?<![.!?]\s)(?<!^)\b[A-Z][a-z]{2,}\b",
+                         re.MULTILINE)
 
 ASKS = [
-    (re.compile(r"(?i)\bcomment (?:the word |\")?[A-Z0-9]{2,}\b"), "comment a keyword"),
+    # The keyword itself must be in capitals, so "comment below" is not one.
+    (re.compile(r"\b(?i:comment)\s+(?:(?i:the word)\s+)?\"?[A-Z0-9]{2,}\b"), "comment a keyword"),
     (re.compile(r"(?i)\b(?:dm|message) me\b"), "DM me"),
     (re.compile(r"(?i)\bsave (?:this|it)\b"), "save this"),
     (re.compile(r"(?i)\bshare (?:this|it)\b"), "share this"),

@@ -36,7 +36,10 @@ python3 beats.py script.txt --target 30     # timed beat sheet before you shoot
 3. If the idea is thin, do not pad it. Ask one batched question: what happened,
    to whom, and what did it cost or return. A Reel needs one specific true
    thing. Get it before writing.
-4. If `~/.claude/instagram/swipe.md` exists, read it. `/ig-viral` writes that
+4. If the user says "write Tuesday" or names a slot, read
+   `~/.claude/instagram/plan.md`. `/ig-plan` wrote the angle and the formula
+   there already.
+5. If `~/.claude/instagram/swipe.md` exists, read it. `/ig-viral` writes that
    file, and it is the user's own evidence about which formulas are working in
    their niche right now. It beats the defaults in this file.
 
@@ -93,8 +96,11 @@ Reply "yes" to log it, or tell me what to change.
 ```
 
 **7. Never publish.** This skill produces a script. The user shoots it and
-posts it. On "yes", append to `~/.claude/instagram/log.md` with the date, the
-hook formula used and the first line, so `/ig-audit` has a history later.
+posts it. On "yes", append one line to `~/.claude/instagram/log.md`:
+`date | format | theme | formula | first line`, for example
+`2026-09-16 | reel | pricing | #5 | Proposals used to take me five hours.`
+`/ig-plan` reads the theme so it does not repeat one, and `/ig-audit` reads
+the formula and format.
 
 ## On-screen text is a separate script
 

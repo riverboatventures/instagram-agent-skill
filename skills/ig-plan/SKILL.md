@@ -17,7 +17,9 @@ executed. Run it once a week, on the same day.
 If `~/.claude/instagram/voice.md`, `swipe.md` and `log.md` exist, read them.
 The swipe file is the user's own evidence from `/ig-viral` about which formulas
 are landing in their niche right now, and it outranks anything in this file.
-The log stops the plan repeating a theme from the last fortnight.
+The log stops the plan repeating a theme from the last fortnight. If
+`engaged.md` exists, rotate the engagement list away from whoever
+`/ig-comment` has been hitting every day.
 
 If they do not exist, ask for four things and write them down:
 
@@ -95,6 +97,6 @@ ENGAGE  (5 reach / 3 peers / 2 buyers)
 Say "write Tuesday" and I will draft it.
 ```
 
-Write the plan to `~/.claude/instagram/plan.md` so the other skills can read
-it. Nothing is scheduled or posted anywhere. This is a plan and the user runs
+Write the plan to `~/.claude/instagram/plan.md` so "write Tuesday" still works
+in a later session: `/ig-reel` reads it. Nothing is scheduled or posted anywhere. This is a plan and the user runs
 it.

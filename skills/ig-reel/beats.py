@@ -28,7 +28,9 @@ import sys
 
 WORD_RE = re.compile(r"[A-Za-z0-9$%'’-]+")
 SENT_RE = re.compile(r"[^.!?]+[.!?]*")
-CONCRETE_RE = re.compile(r"\$\s?\d|\b\d[\d,.]*\b|(?<!^)\b[A-Z][a-z]{2,}\b", re.MULTILINE)
+# A capital after a full stop starts a sentence, it is not a name.
+CONCRETE_RE = re.compile(r"\$\s?\d|\b\d[\d,.]*\b|(?<![.!?]\s)(?<!^)\b[A-Z][a-z]{2,}\b",
+                         re.MULTILINE)
 STOPWORDS = {
     "the", "a", "an", "and", "or", "but", "if", "of", "to", "in", "on", "for",
     "with", "that", "this", "it", "is", "are", "was", "were", "be", "been",

@@ -43,7 +43,7 @@ Or as a plugin:
 
 Project-local instead of global: copy the same folders into your repo's
 `.claude/skills/`. No Claude Code at all? Paste any single `SKILL.md` at the top
-of a chat and it runs as a mode. You lose the five Python tools, which is most
+of a chat and it runs as a mode. You lose the six Python tools, which is most
 of the point of `/ig-reel` and `/ig-human`, but the rest works.
 
 Then spend ten minutes on `templates/voice.md`. Copy it to
@@ -70,7 +70,7 @@ out loud.
 | `/ig-repurpose` | One video, podcast or newsletter into a week of reels and carousels that each stand alone. |
 | `/ig-audit` | Post-mortem on what you already posted. Ranks by outlier multiple and sends per reach, not views. |
 
-## The five tools that actually run
+## The six tools that actually run
 
 No dependencies, no network, nothing uploaded. They run on your machine, on
 your text.
@@ -324,6 +324,7 @@ skills/ig-human/detect.py          the five-check panel
 skills/ig-viral/swipe.py           outlier ranking and formula classification
 skills/ig-profile/rubric.json      the 100-point profile score
 templates/voice.md                 your voice profile. Fill this in first.
+tests/test_tools.py                python3 -m unittest discover tests
 ```
 
 ## Credit

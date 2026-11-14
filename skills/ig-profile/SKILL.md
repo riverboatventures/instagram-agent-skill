@@ -10,6 +10,10 @@ description: >-
 
 # ig-profile
 
+**Voice first.** Read `~/.claude/instagram/voice.md` if it exists and write
+in that voice. If it does not, ask for two or three things the user wrote
+themselves and work from those. `/ig-reel` explains how to write the file.
+
 Almost everybody optimises the wrong thing here. The profile is not a
 storefront people browse. It is a **decision screen**, arrived at from one
 reel, and it gets about three seconds to answer one question: is there more of

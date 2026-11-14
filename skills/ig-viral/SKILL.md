@@ -75,7 +75,7 @@ small enough to read.
 | account | handle |
 | followers | from the profile |
 | median | eyeball the last 12 reels and take the middle view count |
-| views | this reel |
+| views | this reel. "412K" and "1.2M" are fine as written |
 | hook | the first line, spoken or on screen, verbatim including bad grammar |
 | on-screen | the first text card, if different |
 | length | seconds |
@@ -140,7 +140,8 @@ difference between research and horoscopes.
 
 ## Step 5: turn it into something to shoot
 
-For the top three formulas, write **the user's version**: their own story,
+Read `~/.claude/instagram/voice.md` first. For the top three formulas, write
+**the user's version**: their own story,
 their own number, in the shape that is working. Hand each one to `/ig-reel`
 with the formula id already chosen.
 

@@ -9,6 +9,10 @@ description: >-
 
 # ig-comment
 
+**Voice first.** Read `~/.claude/instagram/voice.md` if it exists and write
+in that voice. If it does not, ask for two or three things the user wrote
+themselves and work from those. `/ig-reel` explains how to write the file.
+
 Commenting is the highest-leverage twenty minutes on Instagram and the easiest
 to do badly. A comment near the top of a reel with 40,000 views is seen by more
 people than most accounts' own posts, and it is the one place where a stranger
@@ -82,7 +86,7 @@ Post the first. It concedes something and it has a number in it.
 
 For an engagement round, ask for the 5 to 10 posts as pasted text in one
 message, return one comment each in a single block, and keep a running note in
-`~/.claude/instagram/log.md` of who has been commented on this week.
+`~/.claude/instagram/engaged.md` of who has been commented on and when.
 Commenting on the same three accounts every day is visible and it looks like
 exactly what it is.
 

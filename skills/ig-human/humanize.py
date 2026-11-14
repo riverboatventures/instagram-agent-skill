@@ -199,8 +199,14 @@ def restore_capitals(original, text):
     starts = re.findall(r"(?:^|[.!?]\s+|\n)\s*([A-Za-z])", original)
     if not starts or sum(1 for c in starts if c.isupper()) * 2 < len(starts):
         return text
-    return re.sub(r"(?:^|(?<=[.!?] )|(?<=[.!?]\n)|(?<=\n))\s*([a-z])",
-                  lambda m: m.group(0)[:-1] + m.group(1).upper(), text)
+    # Words the writer already put lower case at a line or sentence start
+    # ("iPhone", "e.g. creators") are theirs. Only fix words a deletion exposed.
+    start = r"(?:^|(?<=[.!?] )|(?<=[.!?]\n)|(?<=\n))\s*"
+    theirs = set(re.findall(start + r"([a-z]\w*)", original))
+    return re.sub(start + r"([a-z]\w*)",
+                  lambda m: m.group(0) if m.group(1) in theirs
+                  else m.group(0)[:-len(m.group(1))] + m.group(1)[0].upper() + m.group(1)[1:],
+                  text)
 
 
 def humanize(text, lex):

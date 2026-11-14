@@ -9,6 +9,10 @@ description: >-
 
 # ig-carousel
 
+**Voice first.** Read `~/.claude/instagram/voice.md` if it exists and write
+in that voice. If it does not, ask for two or three things the user wrote
+themselves and work from those. `/ig-reel` explains how to write the file.
+
 Carousels are the highest-dwell format on the grid, because a swipe is an
 interaction and a scroll is not. They also get a second chance: Instagram can
 show a carousel again starting from a later slide to someone who did not engage
@@ -100,4 +104,7 @@ CAROUSEL  ·  8 slides
 Caption: Job B, hook in line 1, one ask, 3 tags.
 ```
 
-Nothing is uploaded. The user posts it.
+Nothing is uploaded. The user posts it. On "yes", append one line to `~/.claude/instagram/log.md`:
+`date | format | theme | formula | first line`, with
+`carousel` as the format and the cover line as the first line. `/ig-plan` reads the theme so it does not repeat one, and `/ig-audit` reads
+the formula and format.

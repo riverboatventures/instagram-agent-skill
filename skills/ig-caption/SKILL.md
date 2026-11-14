@@ -2,13 +2,17 @@
 name: ig-caption
 description: >-
   Write the Instagram caption - the line that survives the "... more" cut, the
-  body, the single ask, the search terms and the three hashtags - and lint it
+  body, the single ask, the search terms and up to five hashtags - and lint it
   before it goes out. Use when the user says "write the caption", "caption this",
   "what do I put in the description", has a reel or a carousel ready and needs
   the text, or asks about hashtags.
 ---
 
 # ig-caption
+
+**Voice first.** Read `~/.claude/instagram/voice.md` if it exists and write
+in that voice. If it does not, ask for two or three things the user wrote
+themselves and work from those. `/ig-reel` explains how to write the file.
 
 One tool lives in this folder and it runs:
 

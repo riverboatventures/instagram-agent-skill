@@ -42,6 +42,14 @@ and show the working:
 | **Sends per reach** | shares / reach | the strongest single signal you can earn. A send is a person putting their name on it. |
 | **Follows per reach** | follows / reach | whether the profile converted the attention |
 
+Do not do the outlier arithmetic by hand. Put the posts in a tab-separated
+file with the account's median on every row and run the `/ig-viral` script,
+which also names the hook formula of each one. It reads "74.6K" as written:
+
+```bash
+python3 ../ig-viral/swipe.py posts.tsv
+```
+
 Rank by outlier multiple and sends per reach, not views. A reel with 4,000
 views and 90 sends beat the one with 60,000 views and 11.
 
@@ -100,5 +108,4 @@ DO MORE: the ones with a cost you paid and a number attached.
 ```
 
 Then hand the conclusions to `/ig-plan` so next week is built on the user's own
-evidence rather than on defaults, and to `/ig-viral` so the swipe file gets
-filtered to the formulas that work for this account specifically.
+evidence rather than on defaults.

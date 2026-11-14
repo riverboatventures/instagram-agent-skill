@@ -63,6 +63,15 @@ def classify(hook, formulas):
     return None, "unclassified"
 
 
+def to_count(cell):
+    """'412,000', '412K', '1.2M', '48.5K followers' -> int. Instagram shows K and M."""
+    m = re.search(r"(\d[\d,]*(?:\.\d+)?)\s*([kmb])?(?![a-z])", cell or "", re.IGNORECASE)
+    if not m:
+        return None
+    n = float(m.group(1).replace(",", ""))
+    return int(n * {"k": 1e3, "m": 1e6, "b": 1e9}.get((m.group(2) or "").lower(), 1))
+
+
 def read_rows(path):
     raw = sys.stdin.read() if path == "-" else open(path, encoding="utf-8").read()
     lines = [l for l in raw.splitlines() if l.strip() and not l.lstrip().startswith("#")]
@@ -79,13 +88,9 @@ def read_rows(path):
         if len(cells) < len(cols):
             cells += [""] * (len(cols) - len(cells))
         r = dict(zip(cols, [c.strip() for c in cells]))
-        try:
-            r["views"] = int(re.sub(r"[^\d]", "", r.get("views", "")) or 0)
-        except ValueError:
-            continue
+        r["views"] = to_count(r.get("views")) or 0
         for k in ("followers", "median"):
-            digits = re.sub(r"[^\d]", "", r.get(k, "") or "")
-            r[k] = int(digits) if digits else None
+            r[k] = to_count(r.get(k))
         if r["views"] and r.get("hook"):
             rows.append(r)
     return rows
@@ -94,7 +99,9 @@ def read_rows(path):
 def analyse(rows, formulas):
     used_median = any(r.get("median") for r in rows)
     for r in rows:
-        base = r.get("median") or r.get("followers") or 0
+        # One baseline for the whole batch. Mixing views/median with
+        # views/followers ranks two different numbers as if they were one.
+        base = (r.get("median") if used_median else r.get("followers")) or 0
         r["baseline"] = base
         r["outlier"] = round(r["views"] / base, 2) if base else None
         r["formula_id"], r["formula"] = classify(r["hook"], formulas)
@@ -188,6 +195,11 @@ def main():
     a = analyse(rows, formulas)
     if not formulas:
         print("note: hooks.json not found, formulas not named. Pass --hooks.", file=sys.stderr)
+    if a["baseline"] == "account median":
+        missing = sum(1 for r in a["reels"] if not r.get("median"))
+        if missing:
+            print(f"note: {missing} row(s) have no median and are shown as ?. Fill it in.",
+                  file=sys.stderr)
     if score_hook is None:
         print("note: hookscore.py not importable, hook scores skipped.", file=sys.stderr)
 
@@ -197,7 +209,7 @@ def main():
         render(a)
     if args.out:
         path = os.path.expanduser(args.out)
-        os.makedirs(os.path.dirname(path), exist_ok=True)
+        os.makedirs(os.path.dirname(path) or ".", exist_ok=True)
         open(path, "w", encoding="utf-8").write(to_markdown(a))
         print(f"wrote {path}", file=sys.stderr)
 

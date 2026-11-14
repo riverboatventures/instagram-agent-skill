@@ -10,6 +10,10 @@ description: >-
 
 # ig-repurpose
 
+**Voice first.** Read `~/.claude/instagram/voice.md` if it exists and write
+in that voice. If it does not, ask for two or three things the user wrote
+themselves and work from those. `/ig-reel` explains how to write the file.
+
 One good long asset contains four to six posts. Most people extract one and
 throw the rest away.
 
