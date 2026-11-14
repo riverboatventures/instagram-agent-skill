@@ -69,6 +69,7 @@ out loud.
 | `/ig-dm` | The keyword delivery, the first message, the collab pitch, and the two follow-ups. Two. |
 | `/ig-repurpose` | One video, podcast or newsletter into a week of reels and carousels that each stand alone. |
 | `/ig-audit` | Post-mortem on what you already posted. Ranks by outlier multiple and sends per reach, not views. |
+| `/ig-watch` | Hand it an Instagram URL and Claude watches it: downloads the video, builds a timestamped contact sheet, transcribes it, and breaks it down beat by beat. Needs `yt-dlp` and `ffmpeg`. |
 
 ## The five tools that actually run
 
