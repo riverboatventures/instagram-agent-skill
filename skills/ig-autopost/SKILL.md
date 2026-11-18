@@ -92,7 +92,7 @@ strongest. Save the 29 ideas and the table to
 Produce the **#1 idea** as a finished post. If credits remain under the cap,
 pre-generate assets for #2. Follow the Dreamina Skill exactly: create or reuse
 a canvas, send its link, save nodes, `node quote`, then run within the cap.
-Use one node per output. Inspect every output (look at the images and frames)
+Use one node per output, and **run nodes one at a time** (`node create ... --run --wait` per image): batched `node run` calls have returned images swapped or duplicated between prompts. Download with `resource download` (allow the Dreamina CDN host if blocked). Inspect every output (look at the images and frames)
 and regenerate only what misses. Style anchor: stylized illustrated
 video-game key art, bold ink outlines, cel shading, magenta/violet/gold dusk,
 and always append "no text, no letters, no logos, no watermark, no borders,
