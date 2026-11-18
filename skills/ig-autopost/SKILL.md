@@ -1,8 +1,8 @@
 ---
 name: ig-autopost
 description: >-
-  The nightly content run for @vicecity_clipz (Instagram, GTA 6 / Vice City /
-  real-Miami niche): research what is going viral in the niche, write 29 post
+  The nightly content run for @vicecity_clipz (Instagram, GTA 6 niche: every
+  post is about GTA 6 itself): research what is going viral in the niche, write 29 post
   ideas, pick the 5 strongest with prompts and hooks, generate the media with
   Dreamina on the cheapest model that does the job, edit it into a finished
   carousel or Reel, write a growth-and-monetisation caption, then queue a
@@ -14,7 +14,12 @@ description: >-
 # ig-autopost: the nightly @vicecity_clipz run
 
 Account: Instagram **@vicecity_clipz** (Zernio account id `6ac45328d53fb57dc65f572b`).
-Niche: GTA 6 / Vice City / Leonida, and the real Miami and Florida behind it.
+Niche: **GTA 6, and only GTA 6.** Every post is about the game itself: news,
+launch, map and regions, characters, missions, vehicles, weapons, secrets,
+discoveries, comparisons with earlier GTAs, fan debates and theories. Real-world
+Miami/Florida material is allowed only as a supporting angle inside a GTA 6
+post (e.g. "GTA 6's Leonida Keys vs the real Keys"), never as the topic. If an
+idea would still work with "GTA 6" deleted from it, it is off-niche: drop it.
 Goal: views that turn into followers and money (Reels bonuses, subscriptions,
 brand deals). Every post must earn a follow, not just a like.
 
@@ -59,9 +64,8 @@ brand deals). Every post must earn a follow, not just a like.
 ## 1. Research and 29 ideas
 
 - Search the web (WebSearch, several queries in one turn) for what is working
-  **this week**: GTA 6 news and launch-week trends, viral Vice City / Leonida
-  Reels and carousels, "real-life GTA 6 locations", Miami cost-of-living and
-  luxury content, trending formats (POV, "rating", "real vs game", countdowns,
+  **this week** in GTA 6: news, patches, discoveries, easter eggs, records,
+  viral GTA 6 Reels and carousels, fan theories, comparisons, trending formats (POV, "rating", "real vs game", countdowns,
   myth checks). Prefer sources from the last 7 days.
 - If a specific viral Reel URL turns up, view it with `/ig-watch` and note the
   hook formula (see `/ig-viral` for ranking by outlier multiple).
