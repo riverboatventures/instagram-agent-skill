@@ -93,10 +93,20 @@ Produce the **#1 idea** as a finished post. If credits remain under the cap,
 pre-generate assets for #2. Follow the Dreamina Skill exactly: create or reuse
 a canvas, send its link, save nodes, `node quote`, then run within the cap.
 Use one node per output, and **run nodes one at a time** (`node create ... --run --wait` per image): batched `node run` calls have returned images swapped or duplicated between prompts. Download with `resource download` (allow the Dreamina CDN host if blocked). Inspect every output (look at the images and frames)
-and regenerate only what misses. Style anchor: stylized illustrated
-video-game key art, bold ink outlines, cel shading, magenta/violet/gold dusk,
-and always append "no text, no letters, no logos, no watermark, no borders,
-no dark bands, no overlays".
+and regenerate only what misses. Imagery rules (owner's direction, 2026-11-18):
+- **Every post gets new images.** Do not reuse backgrounds from earlier posts
+  (brand elements like the @VICECITY_CLIPZ mark and layouts are fine).
+- **Photoreal and cinematic, not cartoon.** Style anchor: "photorealistic cinematic
+  film still, shot on 35mm, anamorphic lens, shallow depth of field, Miami at
+  golden hour or neon night, saturated magenta, teal and orange grade, high detail,
+  natural skin texture". Append "no text, no letters, no logos, no watermark, no
+  borders, no dark bands, no overlays, not a video game screenshot, no HUD".
+- **Jason & Lucia-style leads are welcome as fan-made characters**: describe the
+  look (her: late 20s, long dark hair, white tank top, gold hoops; him: rugged,
+  short hair, beard, tattoos), never name or imitate the real actors, never make
+  it look like official art or gameplay. Label posts "fan-made AI art".
+- Model choice for photoreal: test Seedream 5.0 Flash first; step up to
+  Seedream 5.0 Pro / 4.5 only when faces or hands come out wrong. Quote first.
 
 ## 4. Edit into a finished post
 
