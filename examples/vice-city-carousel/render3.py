@@ -29,7 +29,7 @@ if __name__ == "__main__":
                 ("house", "Typical home value:", "$7,062,683"),
                 ("pct", "Poverty rate:", "3.8%")],
                "OFF THE CHARTS", "Private ferry dock", "out/07_fisher_island.jpg")
-    info_slide("work/8_indian_creek.png", y0.get("8", 48), "BONUS  ·  NR (NOT RANKED)", "NR. INDIAN CREEK",
+    info_slide("work/8_indian_creek.png", y0.get("8", 48), "BONUS  ·  BILLIONAIRE BUNKER", "INDIAN CREEK",
                "An island village with its own police force and one guarded bridge",
                [("house", "Median home value:", "$2,000,001+ (Census max)"),
                 ("money", "Median household income:", "Not published, too few homes"),
