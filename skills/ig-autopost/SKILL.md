@@ -94,6 +94,11 @@ pre-generate assets for #2. Follow the Dreamina Skill exactly: create or reuse
 a canvas, send its link, save nodes, `node quote`, then run within the cap.
 Use one node per output, and **run nodes one at a time** (`node create ... --run --wait` per image): batched `node run` calls have returned images swapped or duplicated between prompts. Download with `resource download` (allow the Dreamina CDN host if blocked). Inspect every output (look at the images and frames)
 and regenerate only what misses. Imagery rules (owner's direction, 2026-11-18):
+- **Never redo or change a post the owner already approved without asking first.**
+  New direction applies to new posts only unless the owner says otherwise.
+- **Vary the look between posts.** Don't default to the same magenta/teal neon
+  dusk every time: rotate color grades (warm gold, cool teal, natural daylight,
+  noir red, pastel morning), times of day, and the accent color of the layout.
 - **Every post gets new images.** Do not reuse backgrounds from earlier posts
   (brand elements like the @VICECITY_CLIPZ mark and layouts are fine).
 - **Photoreal and cinematic, not cartoon.** Style anchor: "photorealistic cinematic
